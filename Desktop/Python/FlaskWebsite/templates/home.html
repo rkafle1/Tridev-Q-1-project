@@ -1,26 +1,25 @@
 
 <html>
 <head>
-    <h1>
-        Show Connect
-    </h1>
-    <div class="nav bar">
-        <button class = "Home"  onclick="document.location='/home'"> Home</button>
-        <button class = "Profile"  onclick="document.location='/profile'"> Profile</button>
-        <button class = "Search"  onclick="document.location='/search'"> Search</button>
-
+    <div class="nav bar"; style = "border-style: solid;">
+        <button class = "Home"  onclick="document.location='/home'", > Home</button><br>
+        <button class = "Profile"  onclick="document.location='/profile'"> Profile</button><br>
+        <button class = "Search"  onclick="document.location='/search'"> Search</button><br>
+        <h1 style="text-align: center; margin-top: -5%;">
+            Show Connect
+        </h1>
     </div>
 </head>
 <body>
-    <p id="postheader"></p>
     <div class="posts">
-        <p id="postcontent"></p>
-        <p id="likes"></p>
+        <p id="postheader"></p><br>
+        <p id="postcontent", border-style: solid; ></p><br>
+        <p id="likes"></p><br>
         <script>
             let post = "";
             for (let i = 0; i < profile.length; i++) {
                 profilename = profile[i];
-                post = showmoviename[i] +"<br>"+comments[i];
+                post = showmoviename[i] +"<br>"+description[i];
                 likenum = likes[i];
             }
             document.getElementById("postheader").innerHTML = profilename;
@@ -35,3 +34,4 @@
 
 </body>
 </html>
+
