@@ -1,15 +1,33 @@
-{% extends "layout.html" %}
-{% block content %}
-    {% for post in posts %}
-        <article class="media content-section">
-            <div class="media-body">
-            <div class="article-metadata">
-                <a class="mr-2" href="#">{{ post.author }}</a>
-                <small class="text-muted">{{ post.date_posted }}</small>
-            </div>
-            <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
-            <p class="article-content">{{ post.content }}</p>
-            </div>
-        </article>
-    {% endfor %}
-{% endblock content %}
+
+<html>
+<head>
+    <h1>
+        Show Connect
+    </h1>
+    <div class="nav bar">
+        <button class = "Home"  onclick="document.location='/home'"> Home</button>
+        <button class = "Profile"  onclick="document.location='/profile'"> Profile</button>
+        <button class = "Search"  onclick="document.location='/search'"> Search</button>
+
+    </div>
+</head>
+<body>
+    <div class="posts">
+        <p id="postheader"></p>
+        <p id="postcontent"></p>
+        <script>
+            let post = "";
+            for (let i = 0; i < profile.length; i++) {
+                profilename = profile[i];
+                post = showmoviename[i] +"<br>"+comments[i];
+            }
+            document.getElementById("postheader").innerHTML = profilename;
+            document.getElementById("postcontent").innerHTML = post;
+               
+        </script>
+
+       
+    </div>
+
+</body>
+</html>
