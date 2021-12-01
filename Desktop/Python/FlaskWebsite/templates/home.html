@@ -12,19 +12,23 @@
     </div>
 </head>
 <body>
+    <p id="postheader"></p>
     <div class="posts">
-        <p id="postheader"></p>
         <p id="postcontent"></p>
+        <p id="likes"></p>
         <script>
             let post = "";
             for (let i = 0; i < profile.length; i++) {
                 profilename = profile[i];
                 post = showmoviename[i] +"<br>"+comments[i];
+                likenum = likes[i];
             }
             document.getElementById("postheader").innerHTML = profilename;
             document.getElementById("postcontent").innerHTML = post;
+            document.getElementById("likes").innerHTML = likesnum;
                
         </script>
+
 
        
     </div>
