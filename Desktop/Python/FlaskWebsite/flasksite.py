@@ -25,7 +25,16 @@ posts = [
 @app.route('/')
 @app.route('/home')
 def home():
-    return render_template('home.html', posts=posts)
+    profile = []
+    showmoviename = []
+    description = []
+    likes = []
+    for i in range(0, len(posts)):
+        profile.append(posts[i]['author'])
+        showmoviename.append(posts[i]['title'])
+        description.append(posts[i]['content'])
+        likes.append(posts[i]['likes'])
+        return render_template('home.html', profile = profile, showmoviename = showmoviename, description = description, likes = likes )
 
 
 @app.route('/about')
